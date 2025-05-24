@@ -1,0 +1,522 @@
+/* Base Styles */
+.user-profile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.profile-header-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+/* Profile Header */
+.profile-header {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-image-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #f5f5f5;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.edit-button {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.profile-info h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #222;
+}
+
+.profile-info .headline {
+  margin: 5px 0;
+  font-size: 18px;
+  color: #555;
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: #666;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+/* Profile Completion */
+.profile-completion {
+  flex: 1;
+  min-width: 300px;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.completion-header {
+  margin-bottom: 15px;
+}
+
+.completion-header h3 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+}
+
+.completion-header span {
+  font-size: 14px;
+  color: #666;
+}
+
+.progress-bar-container {
+  height: 10px;
+  background: #e0e0e0;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: #4a90e2;
+  transition: width 0.3s ease;
+}
+
+.completion-tip {
+  font-size: 13px;
+  color: #4a90e2;
+  font-style: italic;
+}
+
+/* Profile Sections */
+.profile-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.profile-section {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.section-header {
+  padding: 15px 20px;
+  background: #f5f7fa;
+  border-bottom: 1px solid #e1e4e8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.section-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.icon-button:hover {
+  background: #f0f0f0;
+  color: #4a90e2;
+}
+
+.section-content {
+  padding: 20px;
+}
+
+/* Forms */
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-size: 14px;
+  color: #555;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.checkbox-group {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox-group input {
+  margin: 0;
+}
+
+/* Info Display */
+.info-display {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.info-row {
+  display: flex;
+  gap: 10px;
+}
+
+.info-label {
+  font-weight: 500;
+  min-width: 80px;
+  color: #555;
+}
+
+.info-value {
+  color: #333;
+}
+
+/* Items List */
+.items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  color: #666;
+}
+
+.add-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.item-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  background: #fafafa;
+}
+
+.item-content h3 {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+}
+
+.item-content p {
+  margin: 3px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.item-content .description {
+  margin-top: 8px;
+  color: #666;
+}
+
+.item-actions {
+  display: flex;
+  gap: 5px;
+}
+
+/* Skills */
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  background: #e1ecf4;
+  color: #39739d;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.remove-skill {
+  background: none;
+  border: none;
+  color: #39739d;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+}
+
+.skills-input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.skills-input-container input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.add-skill-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: #5cb85c;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Edit Actions */
+.section-edit-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.save-button {
+  background: #4a90e2;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.cancel-button {
+  background: #f5f5f5;
+  color: #666;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .profile-image-container {
+    margin-bottom: 15px;
+  }
+  
+  .contact-info {
+    justify-content: center;
+  }
+  
+  .item-card {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .item-actions {
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-profile-container {
+    padding: 15px;
+  }
+  
+  .profile-info h1 {
+    font-size: 24px;
+  }
+  
+  .profile-section {
+    border-radius: 0;
+  }
+  
+  .section-header {
+    padding: 12px 15px;
+  }
+  
+  .section-content {
+    padding: 15px;
+  }
+  
+  .info-row {
+    flex-direction: column;
+    gap: 2px;
+  }
+}
+
+
+/* Add to userProfile.css */
+
+/* Form Rows */
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+/* Social Links */
+.social-links-display {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #4a90e2;
+  text-decoration: none;
+  padding: 8px 12px;
+  border: 1px solid #e1e4e8;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.social-link:hover {
+  background: #f5f7fa;
+  border-color: #d1d5da;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #666;
+  transition: color 0.2s;
+}
+
+.social-icons a:hover {
+  color: #4a90e2;
+}
+
+/* Project Links */
+.project-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #4a90e2;
+  text-decoration: none;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+/* Language Proficiency */
+.proficiency-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  background: #e1ecf4;
+  color: #39739d;
+  border-radius: 3px;
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .social-links-display {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

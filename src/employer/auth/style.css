@@ -1,0 +1,384 @@
+/* Base Styles */
+:root {
+  --primary-color: #4361ee;
+  --primary-hover: #3a56d4;
+  --text-color: #2b2d42;
+  --text-light: #8d99ae;
+  --background: #f8f9fa;
+  --white: #ffffff;
+  --error: #ef233c;
+  --success: #2ec4b6;
+  --border: #7e7e7e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--background);
+  color: var(--text-color);
+}
+
+/* Auth Container */
+.emp-auth-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.emp-hero-section {
+  flex: 1;
+  background: linear-gradient(135deg, #4361ee, #3a0ca3);
+  color: var(--white);
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.emp-hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(67, 97, 238, 0.9);
+}
+
+.emp-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+
+.emp-hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.emp-hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.emp-features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.emp-feature {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.emp-feature span {
+  font-size: 1.5rem;
+}
+
+.emp-feature p {
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.emp-form-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: var(--white);
+}
+
+.emp-form-wrapper {
+  width: 100%;
+  max-width: 450px;
+}
+
+.emp-form-wrapper h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.emp-form-subtitle {
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+.emp-switch-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.emp-switch-link:hover {
+  text-decoration: underline;
+}
+
+/* Social Auth */
+.emp-social-auth {
+  margin: 1.5rem 0;
+}
+
+.emp-divider {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+  color: var(--text-light);
+  font-size: 0.875rem;
+}
+
+.emp-divider::before,
+.emp-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--border);
+}
+
+.emp-divider::before {
+  margin-right: 1rem;
+}
+
+.emp-divider::after {
+  margin-left: 1rem;
+}
+
+/* Form Styles */
+.emp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.emp-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.emp-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.emp-input {
+  padding: 0.875rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.9375rem;
+  transition: all 0.2s;
+}
+
+.emp-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+}
+
+.emp-input-error {
+  border-color: var(--error);
+}
+
+.emp-input-error:focus {
+  box-shadow: 0 0 0 3px rgba(239, 35, 60, 0.1);
+}
+
+.emp-error {
+  color: var(--error);
+  font-size: 0.75rem;
+}
+
+/* Password Strength */
+.emp-password-strength {
+  height: 4px;
+  background-color: var(--border);
+  border-radius: 2px;
+  margin-top: 0.5rem;
+  overflow: hidden;
+}
+
+.emp-strength-meter {
+  height: 100%;
+  background-color: var(--success);
+  transition: width 0.3s;
+}
+
+.emp-hint {
+  color: var(--text-light);
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+/* Options */
+.emp-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.emp-remember {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.emp-checkbox {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--primary-color);
+}
+
+.emp-remember-label {
+  font-size: 0.875rem;
+  color: var(--text-color);
+}
+
+.emp-forgot-btn {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+}
+
+.emp-forgot-btn:hover {
+  text-decoration: underline;
+}
+
+/* Buttons */
+.emp-primary-btn {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  padding: 0.875rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 0.5rem;
+}
+
+.emp-primary-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* OTP Verification */
+.emp-otp-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.emp-otp-inputs {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.emp-otp-input {
+  width: 3.5rem;
+  height: 3.5rem;
+  text-align: center;
+  font-size: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: border-color 0.2s;
+}
+
+.emp-otp-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+}
+
+.emp-otp-resend {
+  color: var(--text-light);
+  font-size: 0.875rem;
+}
+
+.emp-resend-btn {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+}
+
+.emp-resend-btn:disabled {
+  color: var(--text-light);
+  cursor: not-allowed;
+}
+
+.emp-resend-btn:hover:not(:disabled) {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .emp-auth-container {
+    flex-direction: column;
+  }
+
+  .emp-hero-section {
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .emp-hero-content {
+    max-width: 100%;
+  }
+
+  .emp-features {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .emp-feature {
+    flex: 1;
+    min-width: 200px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .emp-hero-section {
+    padding: 1.5rem;
+  }
+
+  .emp-hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .emp-feature {
+    min-width: 100%;
+  }
+
+  .emp-otp-input {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+}
